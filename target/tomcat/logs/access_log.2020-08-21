@@ -31,3 +31,7 @@
 0:0:0:0:0:0:0:1 - - [21/Aug/2020:11:02:28 +0200] "GET /RestApp/webapi/persons HTTP/1.1" 200 5 http-bio-8080-exec-9 1
 0:0:0:0:0:0:0:1 - - [21/Aug/2020:11:02:46 +0200] "GET /RestApp/webapi/persons HTTP/1.1" 200 5 http-bio-8080-exec-9 2
 0:0:0:0:0:0:0:1 - - [21/Aug/2020:11:03:49 +0200] "GET /RestApp/webapi/persons HTTP/1.1" 200 96 http-bio-8080-exec-1 170
+0:0:0:0:0:0:0:1 - - [21/Aug/2020:11:45:21 +0200] "GET /RestApp/webapi/persons HTTP/1.1" 200 96 http-bio-8080-exec-4 3
+0:0:0:0:0:0:0:1 - - [21/Aug/2020:11:47:32 +0200] "GET /RestApp/webapi/persons HTTP/1.1" 200 96 http-bio-8080-exec-7 2
+0:0:0:0:0:0:0:1 - - [21/Aug/2020:12:16:22 +0200] "GET /RestApp/webapi/persons/1 HTTP/1.1" 200 51 http-bio-8080-exec-1 154
+0:0:0:0:0:0:0:1 - - [21/Aug/2020:12:18:07 +0200] "GET /RestApp/webapi/persons/1 HTTP/1.1" 200 51 http-bio-8080-exec-5 3
