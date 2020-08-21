@@ -46,4 +46,10 @@ public class PersonService {
         persons.put(person.getId(),person); // osoba sa prepise novou a nahradi sa vlastne
         return getPersonById(person.getId()); // vracia upravenu osobu zo zoznamu
     }
+
+    public void deletePersonWithId(long personId) {
+        // persons.remove(personId,getPersonById(personId)); aj takto sa to da
+        persons.remove(persons.get(personId).getId());
+
+    }
 }

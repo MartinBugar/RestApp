@@ -3,6 +3,7 @@ package com.prometheus.resources;
 import com.prometheus.entity.Person;
 import com.prometheus.services.PersonService;
 
+import javax.print.attribute.standard.Media;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import java.util.List;
@@ -37,9 +38,13 @@ public class PersonsResources {
     public Person updatePerson (Person person, @PathParam("personId") long personId){
         person.setId(personId); //id osobz sa nastavi podla uri/ podla toho co je v pathe
         return PersonService.getPersonService().updatePerson(person);
-
     }
-    
-    
 
+    @DELETE
+    @Path("/{personId}")
+    @Produces(MediaType.APPLICATION_JSON)
+    @Consumes(MediaType.APPLICATION_JSON)
+    public void deletePerson(@PathParam("personId") long personId){
+         PersonService.getPersonService().deletePersonWithId(personId);
+    }
 }
