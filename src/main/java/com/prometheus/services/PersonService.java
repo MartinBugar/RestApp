@@ -1,11 +1,13 @@
 package com.prometheus.services;
 
 import com.prometheus.entity.Person;
+import com.prometheus.resources.PersonsResources;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 public class PersonService {
 
@@ -15,8 +17,14 @@ public class PersonService {
     private PersonService(){
         Person person1 = new Person(1L,"Martin", "Bugar", 26);
         Person person2 = new Person(2L,"Cupretka", "Belizova", 33);
+        Person person3 = new Person(3L,"Martin", "Belizova", 33);
+        Person person4 = new Person(4L,"Cupretaaaaka", "Belizova", 33);
+        Person person5 = new Person(5L,"Cupsssretka", "Belizova", 33);
         persons.put(person1.getId(),person1);
         persons.put(person2.getId(),person2);
+        persons.put(person3.getId(),person3);
+        persons.put(person4.getId(),person4);
+        persons.put(person5.getId(),person5);
     }
 
     public static PersonService getPersonService (){
@@ -26,6 +34,11 @@ public class PersonService {
         return instance;
     }
 
+    public List <Person> getAllPersonWithName(final String name) {
+        return persons.values().stream()
+                .filter(person -> person.getName().equalsIgnoreCase(name))
+                .collect(Collectors.toList());
+    }
 
 
     public List <Person> getAllPersons (){

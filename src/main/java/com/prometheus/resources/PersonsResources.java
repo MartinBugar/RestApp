@@ -3,7 +3,6 @@ package com.prometheus.resources;
 import com.prometheus.entity.Person;
 import com.prometheus.services.PersonService;
 
-import javax.print.attribute.standard.Media;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import java.util.List;
@@ -13,7 +12,10 @@ public class PersonsResources {
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)
-    public List<Person> getPersons(){
+    public List<Person> getPersons(@QueryParam("name") String name){
+        if (name != null){
+            return PersonService.getPersonService().getAllPersonWithName(name);
+        }
         return PersonService.getPersonService().getAllPersons();
     }
 
