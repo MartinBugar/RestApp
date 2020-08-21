@@ -35,4 +35,10 @@ public class PersonService {
     public Person getPersonById(long id){
        return persons.get(id);
     }
+
+    public Person addPerson (Person person){
+        person.setId(persons.size() + 1L);
+        persons.put(person.getId(),person);
+        return getPersonById(person.getId());
+    }
 }
