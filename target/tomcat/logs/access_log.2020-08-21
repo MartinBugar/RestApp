@@ -1,0 +1,4 @@
+0:0:0:0:0:0:0:1 - - [21/Aug/2020:09:32:30 +0200] "GET /RestApp HTTP/1.1" 302 - http-bio-8080-exec-1 0
+0:0:0:0:0:0:0:1 - - [21/Aug/2020:09:32:30 +0200] "GET /RestApp/ HTTP/1.1" 200 247 http-bio-8080-exec-3 365
+0:0:0:0:0:0:0:1 - - [21/Aug/2020:09:32:30 +0200] "GET /favicon.ico HTTP/1.1" 404 - http-bio-8080-exec-4 0
+0:0:0:0:0:0:0:1 - - [21/Aug/2020:09:32:48 +0200] "GET /RestApp/webapi/myresource HTTP/1.1" 200 7 http-bio-8080-exec-5 48
