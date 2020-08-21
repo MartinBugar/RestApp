@@ -30,4 +30,16 @@ public class PersonsResources {
         return PersonService.getPersonService().addPerson(person);
     }
 
+    @PUT
+    @Path("/{personId}")
+    @Produces (MediaType.APPLICATION_JSON)
+    @Consumes (MediaType.APPLICATION_JSON)
+    public Person updatePerson (Person person, @PathParam("personId") long personId){
+        person.setId(personId); //id osobz sa nastavi podla uri/ podla toho co je v pathe
+        return PersonService.getPersonService().updatePerson(person);
+
+    }
+    
+    
+
 }

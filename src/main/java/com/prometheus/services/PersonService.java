@@ -41,4 +41,9 @@ public class PersonService {
         persons.put(person.getId(),person);
         return getPersonById(person.getId());
     }
+
+    public Person updatePerson(Person person) { //tato metoda len pridava do zoznamu upravenu osobu a tu povodnu vymaze
+        persons.put(person.getId(),person); // osoba sa prepise novou a nahradi sa vlastne
+        return getPersonById(person.getId()); // vracia upravenu osobu zo zoznamu
+    }
 }
